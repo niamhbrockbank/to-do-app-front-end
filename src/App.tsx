@@ -4,8 +4,8 @@ import TaskListSection from "./components/TaskListSection";
 
 function App(): JSX.Element {
   // const baseUrl = process.env.NODE_ENV === "production"
-	// ? "to-do-app-nb.herokuapp.com"
-	// : "localhost:5000"
+  // ? "to-do-app-nb.herokuapp.com"
+  // : "localhost:5000"
 
   // console.log(baseUrl)
   return (
@@ -16,9 +16,7 @@ function App(): JSX.Element {
       <hr />
       <TaskListSection />
       <hr />
-      <footer>
-        footer goes here
-      </footer>
+      <footer>footer goes here</footer>
     </>
   );
 }
