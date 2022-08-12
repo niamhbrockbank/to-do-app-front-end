@@ -15,7 +15,7 @@ export default function TaskListSection(): JSX.Element {
   }, []);
 
   function convertToElement(todo: ITaskWithId): JSX.Element {
-    return <li key={todo.id}>{todo.title}</li>;
+    return <li key={todo.id}>{todo.title}, Created: {todo.dateCreated}</li>;
   }
 
   return (

@@ -1,14 +1,16 @@
 import axios from "axios";
 import { useState } from "react";
+import { ITask } from "../types";
 
 export default function NewTaskSection(): JSX.Element {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskBody, setTaskBody] = useState("");
 
   function addNewTask() {
-    const newTask = {
+    const newTask : ITask= {
       title: taskTitle,
       body: taskBody,
+      dateCreated : new Date().toString()
     };
     axios.post("https://to-do-app-nb.herokuapp.com/new/task", newTask);
     setTaskTitle("");
