@@ -11,6 +11,8 @@ export default function NewTaskSection(): JSX.Element {
             body : taskBody
         }
         axios.post('https://to-do-app-nb.herokuapp.com/new/task', newTask)
+        setTaskTitle('')
+        setTaskBody('')
     }
   
     return (
