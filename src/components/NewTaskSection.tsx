@@ -3,7 +3,7 @@ export default function NewTaskSection(): JSX.Element {
     <>
         <input type='text' placeholder='Title of task'/>
         <input type='text' placeholder='Body of task'/>
-        <button>Add new task</button>
+        <button onClick={() => window.alert('working button')}>Add new task</button>
     </>
     )
 }
