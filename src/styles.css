@@ -1,0 +1,12 @@
+
+.task_list{
+    border : 5px solid red;
+    list-style-type: none;
+    display : grid;
+    grid-template-columns: 200px 200px 200px;
+    gap : 10px
+}
+
+.task{
+    border : 2px dotted purple;
+}
