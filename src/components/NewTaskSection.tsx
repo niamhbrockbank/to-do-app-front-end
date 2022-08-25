@@ -8,7 +8,7 @@ export default function NewTaskSection(): JSX.Element {
   const [taskBody, setTaskBody] = useState("");
 
   function addNewTask() {
-    const currDateTime = moment().toISOString()
+    const currDateTime = moment().toISOString();
 
     const newTask: ITask = {
       title: taskTitle,
@@ -16,7 +16,7 @@ export default function NewTaskSection(): JSX.Element {
       date_created: currDateTime,
     };
 
-    axios.post("http://localhost:4000/tasks", newTask)
+    axios.post("https://to-do-app-nb.herokuapp.com/tasks", newTask);
     setTaskTitle("");
     setTaskBody("");
   }
