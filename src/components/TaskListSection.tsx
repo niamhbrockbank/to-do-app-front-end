@@ -16,23 +16,6 @@ export default function TaskListSection(): JSX.Element {
     getTaskList();
   }, []);
 
-  function deleteTask(todo: ITaskWithId) {
-    async function sendDeleteRequest() {
-      await axios.delete(`https://to-do-app-nb.herokuapp.com/tasks/${todo.id}`);
-    }
-
-    sendDeleteRequest();
-  }
-
-  function convertToElement(todo: ITaskWithId): JSX.Element {
-    return (
-      <li key={todo.id} className='task'>
-        <h3>{todo.title}</h3>, Body: {todo.body} Created: {moment(todo.date_created).format("MMM Do 'YY")}
-        <button onClick={() => deleteTask(todo)}>delete</button>
-      </li>
-    );
-  }
-
   function sortDateDesc(task1: ITaskWithId, task2: ITaskWithId){
     if (task1.date_created < task2.date_created){
       return -1
@@ -56,11 +39,10 @@ export default function TaskListSection(): JSX.Element {
     <div>
       <ul className="task_list">
         {sortedTaskList.length > 0 ? (
-          sortedTaskList.map(convertToElement)
+          sortedTaskList.map((el) => Task({todo : el}))
         ) : (
           <>Empty task list</>
         )}
-        <Task />
       </ul>
     </div>
   );
