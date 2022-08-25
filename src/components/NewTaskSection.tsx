@@ -7,10 +7,10 @@ export default function NewTaskSection(): JSX.Element {
   const [taskBody, setTaskBody] = useState("");
 
   function addNewTask() {
-    const newTask : ITask= {
+    const newTask: ITask = {
       title: taskTitle,
       body: taskBody,
-      dateCreated : new Date().toString()
+      dateCreated: new Date().toString(),
     };
     axios.post("https://to-do-app-nb.herokuapp.com/tasks", newTask);
     setTaskTitle("");

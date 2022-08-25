@@ -15,16 +15,21 @@ export default function TaskListSection(): JSX.Element {
     getTaskList();
   }, []);
 
-  function deleteTask(todo : ITaskWithId){
-      async function sendDeleteRequest() {
-          await axios.delete(`https://to-do-app-nb.herokuapp.com/tasks/${todo.id}`);
-      }
-  
-      sendDeleteRequest();
+  function deleteTask(todo: ITaskWithId) {
+    async function sendDeleteRequest() {
+      await axios.delete(`https://to-do-app-nb.herokuapp.com/tasks/${todo.id}`);
+    }
+
+    sendDeleteRequest();
   }
-  
+
   function convertToElement(todo: ITaskWithId): JSX.Element {
-    return <li key={todo.id}>{todo.title}, Created: {todo.dateCreated}<button onClick={() => deleteTask(todo)}>delete</button></li>;
+    return (
+      <li key={todo.id}>
+        {todo.title}, Created: {todo.dateCreated}
+        <button onClick={() => deleteTask(todo)}>delete</button>
+      </li>
+    );
   }
 
   return (

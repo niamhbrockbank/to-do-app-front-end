@@ -4,6 +4,6 @@ export interface ITask {
   dateCreated: string;
 }
 
-export interface ITaskWithId extends ITask{
+export interface ITaskWithId extends ITask {
   id: number;
 }
