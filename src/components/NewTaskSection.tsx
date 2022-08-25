@@ -1,4 +1,5 @@
 import axios from "axios";
+import moment from "moment";
 import { useState } from "react";
 import { ITask } from "../types";
 
@@ -7,12 +8,15 @@ export default function NewTaskSection(): JSX.Element {
   const [taskBody, setTaskBody] = useState("");
 
   function addNewTask() {
+    const currDateTime = moment().toISOString()
+
     const newTask: ITask = {
       title: taskTitle,
       body: taskBody,
-      dateCreated: new Date().toString(),
+      date_created: currDateTime,
     };
-    axios.post("https://to-do-app-nb.herokuapp.com/tasks", newTask);
+
+    axios.post("http://localhost:4000/tasks", newTask)
     setTaskTitle("");
     setTaskBody("");
   }

@@ -1,7 +1,7 @@
 export interface ITask {
   title: string;
   body: string;
-  dateCreated: string;
+  date_created: string;
 }
 
 export interface ITaskWithId extends ITask {
