@@ -4,9 +4,6 @@ export interface ITask {
   dateCreated: string;
 }
 
-export interface ITaskWithId {
+export interface ITaskWithId extends ITask{
   id: number;
-  title: string;
-  body: string;
-  dateCreated : string;
 }

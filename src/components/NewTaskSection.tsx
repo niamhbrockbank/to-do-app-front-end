@@ -12,7 +12,7 @@ export default function NewTaskSection(): JSX.Element {
       body: taskBody,
       dateCreated : new Date().toString()
     };
-    axios.post("https://to-do-app-nb.herokuapp.com/new/task", newTask);
+    axios.post("https://to-do-app-nb.herokuapp.com/tasks", newTask);
     setTaskTitle("");
     setTaskBody("");
   }
