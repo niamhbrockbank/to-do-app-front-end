@@ -23,6 +23,7 @@ button {
   padding: 5px 15px;
   color: #3c362a;
   margin: 5px;
+  font-weight: bold;
 }
 
 button:hover {
@@ -71,6 +72,16 @@ button:hover {
   color: #3c362a;
 }
 
+#filter_section{
+  text-align : center;
+  display : flex;
+  flex-direction : column
+}
+
+.filter_button{
+  margin: 10px
+}
+
 .task_list {
   font-family: inter;
   padding-left: 0;
@@ -114,4 +125,8 @@ button:hover {
 
 #checkbox {
   border: 5px dotted orange;
+}
+
+footer{
+  text-align: center;
 }
