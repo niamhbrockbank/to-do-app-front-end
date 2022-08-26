@@ -1,0 +1,109 @@
+/*
+colour pallette
+#E8F7EE honeydew
+#B8C4BB ash gray
+#663F46 catawba
+#3C362A olive drab 7
+#C9D6EA periwinkle crayola
+*/
+
+@font-face {
+  src: url("./inter-fonts/Inter-VariableFont.ttf");
+  font-family: inter;
+}
+
+body {
+  font-family: "inter", sans-serif;
+}
+
+button {
+  background-color: #c9d6ea;
+  border: 0px;
+  border-radius: 5em;
+  padding: 5px 15px;
+  color: #3c362a;
+  margin: 5px;
+}
+
+button:hover {
+  filter: drop-shadow(0px 0px 0.9px #3c362a);
+}
+
+#new_task {
+  /* display: flex;
+    flex-direction: column; */
+  padding: 10px 15px;
+}
+
+#new_task_content {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+#new_task_title,
+#new_task_body {
+  border: none;
+}
+
+#new_task_title::placeholder,
+#new_task_body::placeholder {
+  text-align: left;
+  padding: 0px 5px;
+}
+
+#new_task_title {
+  margin: 5px;
+  padding: 3px;
+}
+
+#new_task_body {
+  margin: 5px;
+  height: 75px;
+}
+
+.task_list {
+  font-family: inter;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin: 10px;
+  align-items: center;
+}
+
+.task {
+  background-color: #e8f7ee;
+  color: #663f46;
+  padding: 10px;
+  border-radius: 5px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.task:hover {
+  filter: drop-shadow(5px 5px 4px #b8c4bb);
+}
+
+#task_title {
+  color: #3c362a;
+}
+
+#task_details {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8em;
+}
+
+#date_and_check {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+#checkbox {
+  border: 5px dotted orange;
+}

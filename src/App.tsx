@@ -1,3 +1,4 @@
+import "./styles.css";
 import NewTaskSection from "./components/NewTaskSection";
 import FilterSection from "./components/FilterSection";
 import TaskListSection from "./components/TaskListSection";

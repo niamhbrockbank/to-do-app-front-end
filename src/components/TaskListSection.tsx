@@ -1,6 +1,7 @@
 import Task from "./Task";
 import { useEffect, useState } from "react";
 import { ITaskWithId } from "../types";
+import sortTaskList from "../utils/sortTaskList";
 
 export default function TaskListSection(): JSX.Element {
   const [taskList, setTaskList] = useState<ITaskWithId[]>([]);
@@ -14,20 +15,16 @@ export default function TaskListSection(): JSX.Element {
     getTaskList();
   }, []);
 
-  function convertToElement(todo: ITaskWithId): JSX.Element {
-    return <li key={todo.id}>{todo.title}, Created: {todo.dateCreated}</li>;
-  }
+  const sortedTaskList = sortTaskList(taskList);
 
   return (
     <div>
-      <ul>
-        <li>Saved to dos go here</li>
-        {taskList.length > 0 ? (
-          taskList.map(convertToElement)
+      <ul className="task_list">
+        {sortedTaskList.length > 0 ? (
+          sortedTaskList.map((el) => Task({ todo: el }))
         ) : (
           <>Empty task list</>
         )}
-        <Task />
       </ul>
     </div>
   );
