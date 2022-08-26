@@ -9,21 +9,15 @@ interface TaskProps {
 export default function Task({ todo }: TaskProps): JSX.Element {
   return (
     <li key={todo.id} className="task">
-      <h3 id='task_title'>{todo.title}</h3>
-      <div id='task_body'>{todo.body} </div>
-      <div id='task_details'>
-        <div id='date_and_check'>
-          Created:{" "}
-          {moment(todo.date_created).format("MMM Do 'YY")}
-          <input
-            id ='checkbox' 
-            type="checkbox">
-          </input>
+      <h3 id="task_title">{todo.title}</h3>
+      <div id="task_body">{todo.body} </div>
+      <div id="task_details">
+        <div id="date_and_check">
+          Created: {moment(todo.date_created).format("MMM Do 'YY")}
+          <input id="checkbox" type="checkbox"></input>
         </div>
-        <button 
-          onClick={() => deleteTask(todo)}
-          id='delete_button'>
-            delete
+        <button onClick={() => deleteTask(todo)} id="delete_button">
+          delete
         </button>
       </div>
     </li>
