@@ -45,7 +45,7 @@ button:hover {
 #new_task_title,
 #new_task_body {
   border: none;
-  padding : 10px
+  padding: 10px;
 }
 
 #new_task_title::placeholder,
@@ -64,11 +64,11 @@ button:hover {
   padding: 5px 10px;
 }
 
-.character_count{
+.character_count {
   font-size: 0.8em;
   text-align: right;
   padding: 3px 10px;
-  color: #3c362a
+  color: #3c362a;
 }
 
 .task_list {
