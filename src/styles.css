@@ -72,14 +72,14 @@ button:hover {
   color: #3c362a;
 }
 
-#filter_section{
-  text-align : center;
-  display : flex;
-  flex-direction : column
+#filter_section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.filter_button{
-  margin: 10px
+.filter_button {
+  margin: 10px;
 }
 
 .task_list {
@@ -127,6 +127,6 @@ button:hover {
   border: 5px dotted orange;
 }
 
-footer{
+footer {
   text-align: center;
 }
