@@ -3,19 +3,21 @@ import NewTaskSection from "./components/NewTaskSection";
 import FilterSection from "./components/FilterSection";
 import TaskListSection from "./components/TaskListSection";
 import TitleSection from "./components/TitleSection";
+import { useState } from "react";
 
 function App(): JSX.Element {
   // const baseUrl = process.env.NODE_ENV === "production"
   // ? "to-do-app-nb.herokuapp.com"
   // : "localhost:5000"
 
-  // console.log(baseUrl)
+  const [searchTerm, setSearchTerm] = useState("")
+
   return (
     <>
       <TitleSection />
-      <FilterSection />
+      <FilterSection searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
       <NewTaskSection />
-      <TaskListSection />
+      <TaskListSection searchTerm={searchTerm}/>
       <hr />
       <footer>footer goes here</footer>
     </>
