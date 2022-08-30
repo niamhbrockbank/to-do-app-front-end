@@ -13,7 +13,7 @@ export default function TaskListSection(): JSX.Element {
       setTaskList(jsonBody);
     }
     getTaskList();
-  }, []);
+  }, [taskList]);
 
   const sortedTaskList = sortTaskList(taskList);
 

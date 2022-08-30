@@ -32,6 +32,7 @@ export default function NewTaskSection(): JSX.Element {
             value={taskTitle}
             onChange={(e) => setTaskTitle(e.target.value)}
           />
+          <div className="character_count">{taskTitle.length}/60</div>
           <input
             id="new_task_body"
             type="text"
@@ -39,6 +40,7 @@ export default function NewTaskSection(): JSX.Element {
             value={taskBody}
             onChange={(e) => setTaskBody(e.target.value)}
           />
+          <div className="character_count">{taskBody.length}/255</div>
         </div>
         <button onClick={addNewTask}>Add new task</button>
       </div>
