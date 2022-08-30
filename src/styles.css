@@ -46,6 +46,8 @@ button:hover {
 #new_task_title,
 #new_task_body {
   border: none;
+  outline: none;
+  resize: none;
   padding: 10px;
 }
 

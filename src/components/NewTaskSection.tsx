@@ -25,17 +25,19 @@ export default function NewTaskSection(): JSX.Element {
     <>
       <div id="new_task">
         <div id="new_task_content">
-          <input
+          <textarea
+            rows ={1}
+            cols = {50}
             id="new_task_title"
-            type="text"
             placeholder="Title of task"
             value={taskTitle}
             onChange={(e) => setTaskTitle(e.target.value)}
           />
           <div className="character_count">{taskTitle.length}/60</div>
-          <input
+          <textarea
+            rows = {4}
+            cols = {50}
             id="new_task_body"
-            type="text"
             placeholder="Body of task"
             value={taskBody}
             onChange={(e) => setTaskBody(e.target.value)}
