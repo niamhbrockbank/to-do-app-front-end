@@ -13,8 +13,8 @@ function App(): JSX.Element {
   return (
     <>
       <TitleSection />
-      <NewTaskSection />
       <FilterSection />
+      <NewTaskSection />
       <TaskListSection />
       <hr />
       <footer>footer goes here</footer>

@@ -19,6 +19,7 @@ export default function TaskListSection(): JSX.Element {
 
   return (
     <div>
+      <hr />
       <ul className="task_list">
         {sortedTaskList.length > 0 ? (
           sortedTaskList.map((el) => Task({ todo: el }))
