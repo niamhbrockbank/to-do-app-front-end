@@ -19,7 +19,7 @@ function App(): JSX.Element {
       <NewTaskSection />
       <TaskListSection searchTerm={searchTerm}/>
       <hr />
-      <footer>footer goes here</footer>
+      <footer>Task Tracker</footer>
     </>
   );
 }
