@@ -40,6 +40,15 @@ button:hover {
   margin: 5px 10px;
 }
 
+#search_bar {
+  padding: 5px 10px;
+  margin: 5px 20px 0px 20px;
+  font-size: medium;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
 #new_task {
   display: flex;
   flex-direction: column;
@@ -67,17 +76,23 @@ button:hover {
 #new_task_title::placeholder,
 #new_task_body::placeholder {
   text-align: left;
+  font-family: inter;
+  font-size: medium;
 }
 
 #new_task_title {
   margin: 5px;
   padding: 5px 10px;
+  font-family: inter;
+  font-size: medium;
 }
 
 #new_task_body {
   margin: 5px;
   height: 75px;
   padding: 5px 10px;
+  font-family: inter;
+  font-size: medium;
 }
 
 .character_count {
@@ -88,7 +103,7 @@ button:hover {
 }
 
 #filter_section {
-  margin:30px 0px 0px 0px;
+  margin: 30px 0px 0px 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -134,6 +149,12 @@ button:hover {
   display: flex;
   justify-content: space-between;
   margin: 10px;
+}
+
+#completed {
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
 footer {
