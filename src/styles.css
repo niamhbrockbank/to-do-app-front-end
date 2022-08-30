@@ -42,11 +42,16 @@ button:hover {
 
 #search_bar {
   padding: 5px 10px;
-  margin: 5px 20px 0px 20px;
+  margin: 5px 20px 25px 20px;
   font-size: medium;
   outline: none;
   border: 1px solid lightgray;
   border-radius: 5px;
+}
+
+#new_task_section_title{
+  margin: 10px 10px 0px 10px;
+  padding : 0px;
 }
 
 #new_task {
@@ -54,7 +59,6 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   padding: 10px 15px;
-  margin: 10px 0px;
   align-items: center;
 }
 

@@ -23,6 +23,8 @@ export default function NewTaskSection(): JSX.Element {
 
   return (
     <>
+    <hr />
+    <h2 id ='new_task_section_title'>New Task</h2>
       <div id="new_task">
         <div id="new_task_content">
           <textarea

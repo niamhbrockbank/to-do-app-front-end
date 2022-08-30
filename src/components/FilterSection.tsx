@@ -17,7 +17,6 @@ export default function FilterSection({searchTerm, setSearchTerm} : FilterSectio
         placeholder='Search for tasks here...' 
         value={searchTerm} 
         onChange={(e) => handleSearchChange(e)}/>
-      <button className="filter_button">this filter does not do much</button>
     </nav>
   );
 }
