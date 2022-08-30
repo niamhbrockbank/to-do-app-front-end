@@ -5,10 +5,12 @@ import sortTaskList from "../utils/sortTaskList";
 import includesSearchTerm from "../utils/includesSearchTerm";
 
 interface TaskListSectionProps {
-  searchTerm : string
+  searchTerm: string;
 }
 
-export default function TaskListSection({searchTerm} : TaskListSectionProps): JSX.Element {
+export default function TaskListSection({
+  searchTerm,
+}: TaskListSectionProps): JSX.Element {
   const [taskList, setTaskList] = useState<ITaskWithId[]>([]);
 
   useEffect(() => {
@@ -21,7 +23,9 @@ export default function TaskListSection({searchTerm} : TaskListSectionProps): JS
   }, [taskList]);
 
   const sortedTaskList = sortTaskList(taskList);
-  const renderedTaskList = sortedTaskList.filter((task) => includesSearchTerm(task, searchTerm))
+  const renderedTaskList = sortedTaskList.filter((task) =>
+    includesSearchTerm(task, searchTerm)
+  );
 
   return (
     <div>

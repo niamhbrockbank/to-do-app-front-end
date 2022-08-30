@@ -14,8 +14,9 @@ export default function Task({ todo }: TaskProps): JSX.Element {
       <div id="task_details">
         <div id="date_and_check">
           Created: {moment(todo.date_created).format("MMM Do 'YY")}
-          <div id='completed'>
-            Completed:<input type="checkbox" />
+          <div id="completed">
+            Completed:
+            <input type="checkbox" />
           </div>
         </div>
         <button onClick={() => deleteTask(todo)} id="delete_button">

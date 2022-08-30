@@ -10,14 +10,14 @@ function App(): JSX.Element {
   // ? "to-do-app-nb.herokuapp.com"
   // : "localhost:5000"
 
-  const [searchTerm, setSearchTerm] = useState("")
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <>
       <TitleSection />
-      <FilterSection searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+      <FilterSection searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <NewTaskSection />
-      <TaskListSection searchTerm={searchTerm}/>
+      <TaskListSection searchTerm={searchTerm} />
       <hr />
       <footer>Task Tracker</footer>
     </>
