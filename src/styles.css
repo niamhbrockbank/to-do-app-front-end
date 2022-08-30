@@ -17,23 +17,27 @@ body {
 }
 
 button {
-  background-color: #c9d6ea;
+  background-color: #9aa1ab;
+  color: whitesmoke;
   border: 0px;
-  border-radius: 5em;
+  border-radius: 3px;
   padding: 5px 15px;
-  color: #3c362a;
   margin: 5px;
   font-weight: bold;
+  font-size: medium;
 }
 
 button:hover {
-  filter: drop-shadow(0px 0px 0.9px #3c362a);
+  filter: drop-shadow(0px 0px 0.8px #0b0a08);
 }
 
 #new_task {
-  /* display: flex;
-    flex-direction: column; */
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 10px 15px;
+  margin: 25px 3vw;
+  align-items: center;
 }
 
 #new_task_content {
@@ -49,7 +53,6 @@ button:hover {
   outline: none;
   resize: none;
   padding: 10px;
-  width : 85vw;
 }
 
 #new_task_title::placeholder,
@@ -87,16 +90,18 @@ button:hover {
 
 .task_list {
   padding-left: 0;
+  list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin: 10px;
+  row-gap: 10px;
   align-items: center;
+  justify-content: center;
+  
 }
 
 .task {
-  background-color: #e8f7ee;
-  color: #663f46;
+  background-color: whitesmoke;
+  color: #3c362a;
   padding: 10px;
   border-radius: 5px;
   min-height: 150px;
@@ -108,10 +113,6 @@ button:hover {
 
 .task:hover {
   filter: drop-shadow(5px 5px 4px #b8c4bb);
-}
-
-#task_title {
-  color: #3c362a;
 }
 
 #task_details {
