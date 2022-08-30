@@ -2,6 +2,7 @@ import "./styles.css";
 import NewTaskSection from "./components/NewTaskSection";
 import FilterSection from "./components/FilterSection";
 import TaskListSection from "./components/TaskListSection";
+import TitleSection from "./components/TitleSection";
 
 function App(): JSX.Element {
   // const baseUrl = process.env.NODE_ENV === "production"
@@ -11,6 +12,7 @@ function App(): JSX.Element {
   // console.log(baseUrl)
   return (
     <>
+      <TitleSection />
       <NewTaskSection />
       <FilterSection />
       <TaskListSection />
