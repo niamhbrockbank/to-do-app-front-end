@@ -26,8 +26,8 @@ export default function NewTaskSection(): JSX.Element {
       <div id="new_task">
         <div id="new_task_content">
           <textarea
-            rows ={1}
-            cols = {50}
+            rows={1}
+            cols={50}
             id="new_task_title"
             placeholder="Title of task"
             value={taskTitle}
@@ -35,8 +35,8 @@ export default function NewTaskSection(): JSX.Element {
           />
           <div className="character_count">{taskTitle.length}/60</div>
           <textarea
-            rows = {4}
-            cols = {50}
+            rows={4}
+            cols={50}
             id="new_task_body"
             placeholder="Body of task"
             value={taskBody}
