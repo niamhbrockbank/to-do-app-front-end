@@ -14,26 +14,52 @@ colour pallette
 
 body {
   font-family: "inter", sans-serif;
+  margin: 30px;
 }
 
 button {
-  background-color: #c9d6ea;
+  background-color: #9aa1ab;
+  color: whitesmoke;
   border: 0px;
-  border-radius: 5em;
+  border-radius: 3px;
   padding: 5px 15px;
-  color: #3c362a;
   margin: 5px;
   font-weight: bold;
+  font-size: medium;
 }
 
 button:hover {
-  filter: drop-shadow(0px 0px 0.9px #3c362a);
+  filter: drop-shadow(0px 0px 0.8px #0b0a08);
+}
+
+#title {
+  margin: 5px 10px;
+}
+
+#title_description {
+  margin: 5px 10px;
+}
+
+#search_bar {
+  padding: 5px 10px;
+  margin: 5px 20px 25px 20px;
+  font-size: medium;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+#new_task_section_title {
+  margin: 10px 10px 0px 10px;
+  padding: 0px;
 }
 
 #new_task {
-  /* display: flex;
-    flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 10px 15px;
+  align-items: center;
 }
 
 #new_task_content {
@@ -46,23 +72,31 @@ button:hover {
 #new_task_title,
 #new_task_body {
   border: none;
+  outline: none;
+  resize: none;
   padding: 10px;
 }
 
 #new_task_title::placeholder,
 #new_task_body::placeholder {
   text-align: left;
+  font-family: inter;
+  font-size: medium;
 }
 
 #new_task_title {
   margin: 5px;
   padding: 5px 10px;
+  font-family: inter;
+  font-size: medium;
 }
 
 #new_task_body {
   margin: 5px;
   height: 75px;
   padding: 5px 10px;
+  font-family: inter;
+  font-size: medium;
 }
 
 .character_count {
@@ -73,6 +107,7 @@ button:hover {
 }
 
 #filter_section {
+  margin: 30px 0px 0px 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -83,21 +118,22 @@ button:hover {
 }
 
 .task_list {
-  font-family: inter;
   padding-left: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-  margin: 10px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
   align-items: center;
+  justify-content: center;
 }
 
 .task {
-  background-color: #e8f7ee;
-  color: #663f46;
+  background-color: whitesmoke;
+  color: #3c362a;
   padding: 10px;
   border-radius: 5px;
-  height: 150px;
+  min-height: 150px;
+  width: 85vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -105,10 +141,6 @@ button:hover {
 
 .task:hover {
   filter: drop-shadow(5px 5px 4px #b8c4bb);
-}
-
-#task_title {
-  color: #3c362a;
 }
 
 #task_details {
@@ -123,8 +155,10 @@ button:hover {
   margin: 10px;
 }
 
-#checkbox {
-  border: 5px dotted orange;
+#completed {
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
 footer {

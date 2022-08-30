@@ -2,8 +2,15 @@ import Task from "./Task";
 import { useEffect, useState } from "react";
 import { ITaskWithId } from "../types";
 import sortTaskList from "../utils/sortTaskList";
+import includesSearchTerm from "../utils/includesSearchTerm";
 
-export default function TaskListSection(): JSX.Element {
+interface TaskListSectionProps {
+  searchTerm: string;
+}
+
+export default function TaskListSection({
+  searchTerm,
+}: TaskListSectionProps): JSX.Element {
   const [taskList, setTaskList] = useState<ITaskWithId[]>([]);
 
   useEffect(() => {
@@ -16,14 +23,18 @@ export default function TaskListSection(): JSX.Element {
   }, [taskList]);
 
   const sortedTaskList = sortTaskList(taskList);
+  const renderedTaskList = sortedTaskList.filter((task) =>
+    includesSearchTerm(task, searchTerm)
+  );
 
   return (
     <div>
+      <hr />
       <ul className="task_list">
-        {sortedTaskList.length > 0 ? (
-          sortedTaskList.map((el) => Task({ todo: el }))
+        {renderedTaskList.length > 0 ? (
+          renderedTaskList.map((el) => Task({ todo: el }))
         ) : (
-          <>Empty task list</>
+          <>No tasks to show</>
         )}
       </ul>
     </div>
